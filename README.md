@@ -1,5 +1,5 @@
 # ASUS H110M-D Hackintosh 
-Configured for macOS 10.14.1 Mojave as iMac17,1
+Configured for macOS 10.14.4 Mojave as iMac17,1
 
 ## System Configuration:
 
