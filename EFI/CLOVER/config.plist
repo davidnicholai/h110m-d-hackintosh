@@ -24,7 +24,7 @@
 		<key>#smartUPS</key>
 		<false/>
 		<key>AutoMerge</key>
-		<false/>
+		<true/>
 		<key>DSDT</key>
 		<dict>
 			<key>#DropOEM_DSM</key>
@@ -65,67 +65,65 @@
 			<key>Fixes</key>
 			<dict>
 				<key>AddDTGP</key>
-				<true/>
+				<false/>
 				<key>AddHDMI</key>
-				<true/>
+				<false/>
 				<key>AddIMEI</key>
 				<false/>
 				<key>AddMCHC</key>
 				<false/>
 				<key>AddPNLF</key>
-				<true/>
+				<false/>
 				<key>DeleteUnused</key>
-				<true/>
+				<false/>
 				<key>FakeLPC</key>
 				<false/>
 				<key>FixACST</key>
-				<true/>
+				<false/>
 				<key>FixADP1</key>
-				<true/>
+				<false/>
 				<key>FixAirport</key>
 				<false/>
 				<key>FixDarwin</key>
 				<false/>
 				<key>FixDarwin7</key>
-				<true/>
+				<false/>
 				<key>FixDisplay</key>
-				<true/>
+				<false/>
 				<key>FixFirewire</key>
 				<false/>
 				<key>FixHDA</key>
-				<true/>
+				<false/>
 				<key>FixHPET</key>
-				<true/>
-				<key>FixHeaders</key>
 				<true/>
 				<key>FixIDE</key>
 				<false/>
 				<key>FixIPIC</key>
-				<true/>
+				<false/>
 				<key>FixIntelGfx</key>
 				<false/>
 				<key>FixLAN</key>
-				<true/>
+				<false/>
 				<key>FixMutex</key>
 				<false/>
 				<key>FixRTC</key>
-				<true/>
+				<false/>
 				<key>FixRegions</key>
-				<true/>
+				<false/>
 				<key>FixS3D</key>
-				<true/>
+				<false/>
 				<key>FixSATA</key>
 				<false/>
 				<key>FixSBUS</key>
-				<true/>
+				<false/>
 				<key>FixShutdown</key>
 				<true/>
 				<key>FixTMR</key>
-				<true/>
+				<false/>
 				<key>FixUSB</key>
-				<true/>
+				<false/>
 				<key>FixWAK</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>Name</key>
 			<string>DSDT.aml</string>
@@ -177,7 +175,7 @@
 					<key>Comment</key>
 					<string>Rename oem _DSM to ZDSM</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					X0RTTQ==
@@ -211,29 +209,15 @@
 		<array>
 			<dict>
 				<key>Signature</key>
-				<string>DMAR</string>
-			</dict>
-			<dict>
-				<key>Signature</key>
-				<string>SSDT</string>
-				<key>TableId</key>
-				<string>CpuPm</string>
-			</dict>
-			<dict>
-				<key>#Length</key>
-				<integer>720</integer>
-				<key>Signature</key>
-				<string>SSDT</string>
-				<key>TableId</key>
-				<string>Cpu0Ist</string>
+				<string>MATS</string>
 			</dict>
 		</array>
 		<key>FixHeaders</key>
-		<true/>
+		<false/>
 		<key>FixMCFG</key>
-		<true/>
+		<false/>
 		<key>HaltEnabler</key>
-		<true/>
+		<false/>
 		<key>RenameDevices</key>
 		<dict>
 			<key>#_SB.PCI0.RP01.PXSX</key>
@@ -280,8 +264,10 @@
 				<key>#PluginType</key>
 				<false/>
 				<key>CStates</key>
-				<true/>
+				<false/>
 				<key>PStates</key>
+				<false/>
+				<key>PluginType</key>
 				<true/>
 			</dict>
 		</dict>
@@ -296,18 +282,18 @@
 		<integer>0</integer>
 		<key>#XMPDetection</key>
 		<string>-1</string>
+		<key>Arguments</key>
+		<string>dart=0 darkwake=0</string>
+		<key>CustomLogo</key>
+		<false/>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>DisableCloverHotkeys</key>
 		<false/>
-		<key>Fast</key>
-		<false/>
-		<key>Legacy</key>
-		<string>PBR</string>
 		<key>NeverDoRecovery</key>
-		<true/>
+		<false/>
 		<key>NeverHibernate</key>
 		<false/>
 		<key>RtcHibernateAware</key>
@@ -319,7 +305,9 @@
 		<key>StrictHibernate</key>
 		<false/>
 		<key>Timeout</key>
-		<integer>5</integer>
+		<integer>2</integer>
+		<key>XMPDetection</key>
+		<false/>
 	</dict>
 	<key>BootGraphics</key>
 	<dict>
@@ -328,7 +316,7 @@
 		<key>EFILoginHiDPI</key>
 		<integer>1</integer>
 		<key>UIScale</key>
-		<integer>1</integer>
+		<integer>0</integer>
 	</dict>
 	<key>CPU</key>
 	<dict>
@@ -612,23 +600,40 @@
 			<key>#Inject</key>
 			<string>12</string>
 			<key>AFGLowPowerState</key>
-			<true/>
+			<false/>
+			<key>Inject</key>
+			<integer>1</integer>
 			<key>ResetHDA</key>
-			<true/>
+			<false/>
+		</dict>
+		<key>FakeID</key>
+		<dict>
+			<key>ATI</key>
+			<string>0x0</string>
+			<key>IMEI</key>
+			<string>0x0</string>
+			<key>IntelGFX</key>
+			<string>0x0</string>
+			<key>LAN</key>
+			<string>0x0</string>
+			<key>NVidia</key>
+			<string>0x0</string>
+			<key>SATA</key>
+			<string>0x0</string>
+			<key>WIFI</key>
+			<string>0x0</string>
+			<key>XHCI</key>
+			<string>0x0</string>
 		</dict>
 		<key>HDMIInjection</key>
-		<false/>
-		<key>LANInjection</key>
 		<false/>
 		<key>USB</key>
 		<dict>
 			<key>AddClockID</key>
-			<true/>
+			<false/>
 			<key>FixOwnership</key>
 			<true/>
 			<key>HighCurrent</key>
-			<false/>
-			<key>Inject</key>
 			<false/>
 		</dict>
 		<key>UseIntelHDMI</key>
@@ -760,16 +765,39 @@
 		<false/>
 		<key>EmbeddedThemeType</key>
 		<string>Daytime</string>
+		<key>Hide</key>
+		<array>
+			<string>Windows</string>
+			<string>BOOTX64.EFI</string>
+		</array>
+		<key>Language</key>
+		<string>en:0</string>
+		<key>Mouse</key>
+		<dict>
+			<key>Enabled</key>
+			<true/>
+			<key>Mirror</key>
+			<false/>
+		</dict>
 		<key>PlayAsync</key>
 		<false/>
+		<key>Scan</key>
+		<dict>
+			<key>Entries</key>
+			<true/>
+			<key>Legacy</key>
+			<string>First</string>
+			<key>Tool</key>
+			<true/>
+		</dict>
 		<key>ScreenResolution</key>
-		<string>1280x1024</string>
+		<string>1920x1080</string>
 		<key>ShowOptimus</key>
 		<false/>
 		<key>Theme</key>
 		<string>random</string>
 		<key>Timezone</key>
-		<integer>3</integer>
+		<integer>0</integer>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -974,9 +1002,9 @@
 			</dict>
 		</array>
 		<key>AppleIntelCPUPM</key>
-		<false/>
+		<true/>
 		<key>AppleRTC</key>
-		<false/>
+		<true/>
 		<key>Debug</key>
 		<false/>
 		<key>DellSMBIOSPatch</key>
@@ -986,7 +1014,7 @@
 		<key>KernelLapic</key>
 		<false/>
 		<key>KernelPm</key>
-		<false/>
+		<true/>
 		<key>KernelToPatch</key>
 		<array>
 			<dict>
@@ -1165,8 +1193,14 @@
 		<true/>
 		<key>#Version</key>
 		<string>1.0</string>
+		<key>BiosVersion</key>
+		<string>IM171.88Z.0110.B00.17080012</string>
 		<key>Manufacturer</key>
 		<string>Apple Inc.</string>
+		<key>ProductName</key>
+		<string>iMac17,1</string>
+		<key>SerialNumber</key>
+		<string>C02V58MEGG7L</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
