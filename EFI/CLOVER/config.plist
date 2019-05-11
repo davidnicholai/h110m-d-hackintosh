@@ -339,6 +339,11 @@
 	<dict>
 		<key>BiosVersion</key>
 		<string>IM171.88Z.0110.B00.1708080012</string>
+		<key>Memory</key>
+		<dict>
+			<key>Channels</key>
+			<integer>0</integer>
+		</dict>
 		<key>ProductName</key>
 		<string>iMac17,1</string>
 		<key>SerialNumber</key>
